@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue</title>
+	<script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div id="vue-app">
+		<h2>{{ greet("Morning") }}</h2>
+		<p>{{ name }}</p>
+		<p>{{ job }}</p>
+		<p>{{ age }}</p>
+		<p><a v-bind:href="website">Google</a></p>
+		<p v-html="websiteTag"></p>
+		<!-- Events -->
+			<button v-on:click="add(1)">Add age</button>
+			<button v-on:click="sub(1)">sub age</button>
+			<button @dblclick="add(10)">Add age 10</button>
+			<button @dblclick="sub(10)">sub age 10</button>
+			<!-- mouse move -->
+				<!-- <div id="canvas" v-on:mousemove="updateXY">{{x}}, {{y}}</div> -->
+			<!-- ./mouse move -->
+		<!-- ./Events -->
+		
+		<!-- Event Modifiers -->
+			<button v-on:click.once="add(1)">click once only</button>
+		<!-- ./Event Modifiers -->
+		
+		<!-- keyboard events and 2way data binding -->
+			<form action="#">
+				<label>name:</label>
+				<input type="text" name="" id="" v-model="name" v-on:keyup.enter="logName">
+				<label>age</label>
+				<input type="text" name="" id="" v-model="age" v-on:keyup.tab="logAge">
+			</form>
+		<!-- ./keyboard events and 2way data binding -->
+
+	</div>
+	<script src="app.js"></script>
+</body>
+</html>
