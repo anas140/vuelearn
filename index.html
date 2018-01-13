@@ -37,6 +37,15 @@
 			</form>
 		<!-- ./keyboard events and 2way data binding -->
 
+		<!-- Computed Properties -->
+			<button v-on:click="a++">Add A</button>
+			<button v-on:click="b++">Add B </button>
+			<p>A - {{ a }}</p>
+			<p>B - {{ b }}</p>
+			<p>Age + A = {{ addToA }}</p>
+			<p>Age + B = {{ addToB }}</p>
+		<!-- ./ Computed Properties -->
+
 	</div>
 	<script src="app.js"></script>
 </body>

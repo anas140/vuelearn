@@ -7,7 +7,11 @@ new Vue({
 		websiteTag: '<a href="http://google.com">ggl</a>',
 		age: 21,
 		x: 0,
-		y: 0
+		y: 0,
+
+		// Computed property tut
+		a: 0,
+		b: 0,
 	},
 	methods: {
 		greet: function(greet) {
@@ -28,6 +32,28 @@ new Vue({
 		},
 		logAge: function() {
 			console.log(`You Entered ${this.age}`)
+		},
+		
+		// for computed add inner to computed propscomputed Properties 
+		// addToA: function() {
+		// 	console.log('AddToA');
+		// 	return this.a + this.age;
+		// },
+		// addToB: function() {
+		// 	console.log('AddToB');
+		// 	return this.b + this.age;
+		// }
+		// ./computed Properties
+
+	},
+	computed: {
+		addToA: function() {
+			console.log('AddToA');
+			return this.a + this.age;
+		},
+		addToB: function() {
+			console.log('AddToB');
+			return this.b + this.age;
 		}
 	}
 })
